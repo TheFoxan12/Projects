@@ -1,14 +1,24 @@
 import random
+import sys
 import colorama
 from colorama import Fore
 from colorama import Style
+
+try:
+	randomize = sys.argv[1]
+except IndexError:
+	randomize = "True"
+
+if randomize == "False":
+	randomize = False
+else:
+	randomize = True
 
 colorama.init()
 letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v",
 		   "w", "x", "y", "z"]
 word = "theophile"
 colors = [Fore.BLUE, Fore.GREEN, Fore.RED, Fore.YELLOW, Fore.MAGENTA, Fore.CYAN, Fore.WHITE]
-randomize = True
 for i in range(50000):
 	if not randomize:
 		for letter in word:
