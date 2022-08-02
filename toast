@@ -1,6 +1,6 @@
 while true
 do
 	osascript -e "set Volume 10"
-	echo "\a"
+	echo "\\a"
 	sleep 0.12
 done
