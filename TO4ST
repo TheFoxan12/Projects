@@ -1,0 +1,7 @@
+#sleep 300
+while true
+do
+	osascript -e "set Volume 10"
+	echo "\a"
+	sleep 0.12
+done
